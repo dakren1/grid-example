@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Very-Light-Gray);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/*Header*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+header h1 {
+    color: var(--Very-Dark-Blue);
+    margin-top: 0;
+    text-align: center;
+}
+
+header h2 {
+    color: var(--Very-Dark-Blue);
+    font-weight: 200;
+    margin-bottom: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+header p {
+    font-weight: 200;
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+/*Grid*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2%;
+}
+
+.col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col1,
+.col3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Card*/
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5%;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.10);
+    width: 75%;
+    margin-bottom: 2rem;
+}
+
+.card p {
+    color: var(--Very-Dark-Blue);
+    font-weight: 400;
+}
+
+.cyan {
+    border-top: 3px solid var(--Cyan);
+}
+
+.red {
+    border-top: 3px solid var(--Red);
+}
+
+.orange {
+    border-top: 3px solid var(--Orange);
+}
+
+.blue {
+    border-top: 3px solid var(--Blue);
+}
+
+.image-card {
+    display: flex;
+    justify-content: flex-end;
+}
+
+img {
+    height: auto;
+}
+
+
+/*Mobile*/
+
+@media (max-width: 375px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    header h2 {
+        font-size: 1.5rem;
+    }
+}
